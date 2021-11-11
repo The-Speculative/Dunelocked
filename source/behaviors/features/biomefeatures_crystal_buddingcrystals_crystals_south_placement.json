@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_crystal_buddingcrystals_crystals_south_placement"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_crystal_buddingcrystals_crystals_south",
+
+		"iterations": "math.random(0, 1) < 0.5",
+
+		"x": 0,
+		"z": 1,
+		"y": 0
+	}
+}

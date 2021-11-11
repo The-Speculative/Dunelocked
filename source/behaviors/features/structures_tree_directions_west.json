@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "dunelocked:structures_tree_directions_west"
+		},
+
+		"structure_name": "dunelocked:tree",
+
+		"facing_direction": "west",
+		"constraints": {
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air",
+					"minecraft:sand",
+					"minecraft:sandstone",
+					"minecraft:dirt",
+					"minecraft:grass",
+					"minecraft:moss_block",
+					"minecraft:water"
+				]
+			},
+			"grounded": {}
+		}
+	}
+}

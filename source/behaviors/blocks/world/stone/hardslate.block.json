@@ -1,0 +1,33 @@
+{
+    "format_version": "1.17.32",
+    "minecraft:block": {
+        "description": {
+            "identifier": "dunelocked:hardslate"
+        },
+        "components": {
+            "tag:hardslate": {},
+            "minecraft:loot": "loot_tables/empty.json",
+            "minecraft:destroy_time": 182080286026.5,
+            "minecraft:explosion_resistance": 987104861056.0,
+
+            "minecraft:map_color": "#7d7a62",
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.stone"
+            },
+
+            "minecraft:on_player_destroyed": {
+                "event": "blockDestroyed"
+            }
+        },
+        "events": {
+            "blockDestroyed": {
+                "run_command": {
+                    "command": [
+                        "setblock ~ ~ ~ dunelocked:hardslate"
+                    ]
+                }
+            }
+        }
+    }
+}

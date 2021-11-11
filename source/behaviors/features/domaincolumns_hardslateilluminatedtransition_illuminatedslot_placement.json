@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:domaincolumns_hardslateilluminatedtransition_illuminatedslot_placement"
+		},
+
+		"places_feature": "dunelocked:slotmaps_illuminated",
+
+		"iterations": "
+			t.biomecolumn_maximumheight = t.domaincolumn_layers_illuminated_height;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

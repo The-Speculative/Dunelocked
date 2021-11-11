@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_shared_stations"
+		},
+
+		"features": [
+			["dunelocked:biomefeatures_shared_stations_craftingtable", 4],
+			["dunelocked:biomefeatures_shared_stations_furnace", 2],
+			["dunelocked:biomefeatures_shared_stations_barrel", 1]
+		]
+	}
+}

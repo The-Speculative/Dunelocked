@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:overworld_gametiles_surface_tiles_pyramid",
+				"condition": "t.pyramid_generates"
+			}//,
+			// {
+			// 	"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village",
+			// 	"condition": 0
+			// }
+		]
+	}
+}

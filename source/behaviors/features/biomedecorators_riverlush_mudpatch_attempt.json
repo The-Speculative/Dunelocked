@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_riverlush_mudpatch_attempt"
+		},
+
+		"features": [
+			"dunelocked:biomedecorators_riverlush_mudpatch_condition",
+			"dunelocked:biomedecorators_riverlush_mudpatch"
+		],
+		"early_out": "first_failure"
+	}
+}

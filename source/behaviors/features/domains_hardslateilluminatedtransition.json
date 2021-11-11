@@ -1,0 +1,50 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:domains_hardslateilluminatedtransition"
+		},
+
+		"places_feature": "dunelocked:domaincolumns_hardslateilluminatedtransition",
+
+		"iterations": "
+			t.hardslate_height_minimum =
+				math.floor(
+					2
+					+ (
+						2 * t.noiseoctaves_local
+						+ 5 * t.noiseoctaves_clump
+					)
+						/ 7
+						* 1
+				)
+			;
+
+			t.domaincolumn_layers_hardslate_height =
+				t.hardslate_height_minimum
+				+ (
+					t.domain_maximumheight
+					- t.hardslate_height_minimum
+				)
+					* math.hermite_blend(
+						(0.25 - t.column_tileselector) / 0.25
+					)
+			;
+			t.domaincolumn_layers_hardslate_position =
+				t.domain_maximumheight
+				- t.domaincolumn_layers_hardslate_height
+			;
+
+			t.domaincolumn_layers_illuminated_height =
+				t.domaincolumn_layers_hardslate_position
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

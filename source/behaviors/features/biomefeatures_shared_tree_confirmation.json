@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_shared_tree_confirmation"
+		},
+
+		"places_feature": "dunelocked:features_tree",
+
+		"iterations": "t.dimension_sealevel < v.originy && v.originy <= t.dimension_sealevel + 8",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_lavacrystaltransition"
+		},
+
+		"features": [
+			"dunelocked:biomecolumns_lava_basalt",
+			"dunelocked:biomecolumns_lavacrystaltransition_crystalcolumn_placement",
+			"dunelocked:biomecolumns_lava_deepslate_placement"
+		]
+	}
+}

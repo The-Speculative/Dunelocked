@@ -1,0 +1,31 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:structures_fossil_registration"
+		},
+
+		"places_feature": "dunelocked:structures_fossil",
+
+		"iterations": "
+			t.structure_size_x = 8;
+			t.structure_size_z = 5;
+			t.structure_size_y = 13;
+
+			t.structure_direction_innate = 3;
+
+			t.structure_attachment_x = 4;
+			t.structure_attachment_z = 2;
+			t.structure_attachment_y = 6;
+
+
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

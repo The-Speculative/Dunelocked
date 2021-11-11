@@ -1,0 +1,85 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles_village"
+		},
+
+		"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village_structures",
+
+		"iterations": "
+			math.abs(v.originx - t.center_x)
+			+ math.abs(v.originz - t.center_z)
+			+ math.random_integer(0, 16)
+			< 64 ? {
+				t.village_structure_angle = math.atan2(t.center_z - v.originz, t.center_x - v.originx);
+				t.village_structure_distance = math.abs(v.originx - t.center_x) + math.abs(v.originz - t.center_z);
+				t.village_structure_angle = t.village_structure_angle;
+				-45 <= t.village_structure_angle && t.village_structure_angle < 45 ? {
+					t.village_structure_direction = 0;
+				};
+				-135 <= t.village_structure_angle && t.village_structure_angle < -45 ? {
+					t.village_structure_direction = 1;
+				};
+				135 <= t.village_structure_angle || t.village_structure_angle < -135 ? {
+					t.village_structure_direction = 2;
+				};
+				45 <= t.village_structure_angle && t.village_structure_angle < 135 ? {
+					t.village_structure_direction = 3;
+				};
+
+				1 ? {
+					t.village_structure_id = 'hut';
+
+					t.village_structure_innatedirection = 2;
+
+					t.village_structure_size_x = 8;
+					t.village_structure_size_z = 7;
+
+					t.village_structure_alignment_x = 0;
+					t.village_structure_alignment_z = 3;
+					t.village_structure_alignment_y = 2;
+				};
+
+				t.redirection = math.mod(t.village_structure_direction - t.village_structure_innatedirection + 4, 4);
+				t.village_structure_facingdirection = t.redirection + 1;
+
+				t.redirection == 0 ? {
+					t.village_structure_offset_x = math.random_integer(0, 14 - t.village_structure_size_x);
+					t.village_structure_offset_z = math.random_integer(0, 14 - t.village_structure_size_z);
+
+					t.door_x = t.village_structure_alignment_x;
+					t.door_z = t.village_structure_alignment_z;
+				};
+				t.redirection == 1 ? {
+					t.village_structure_offset_x = t.village_structure_size_z + math.random_integer(0, 14 - t.village_structure_size_z);
+					t.village_structure_offset_z = math.random_integer(0, 14 - t.village_structure_size_x);
+
+					t.door_x = -t.village_structure_alignment_z - 1;
+					t.door_z = -t.village_structure_alignment_x - 1;
+				};
+				t.redirection == 2 ? {
+					t.village_structure_offset_x = t.village_structure_size_x + math.random_integer(0, 14 - t.village_structure_size_x);
+					t.village_structure_offset_z = t.village_structure_size_z + math.random_integer(0, 14 - t.village_structure_size_z);
+
+					t.door_x = -t.village_structure_alignment_x - 1;
+					t.door_z = -t.village_structure_alignment_z - 1;
+				};
+				t.redirection == 3 ? {
+					t.village_structure_offset_x = math.random_integer(0, 14 - t.village_structure_size_z);
+					t.village_structure_offset_z = t.village_structure_size_x + math.random_integer(0, 14 - t.village_structure_size_x);
+
+					t.door_x = t.village_structure_alignment_z;
+					t.door_z = t.village_structure_alignment_x;
+				};
+
+				return 1;
+			};
+		",
+
+		"x": "t.village_structure_offset_x",
+		"z": "t.village_structure_offset_z",
+		"y": "query.above_top_solid(v.worldx + t.door_x, v.worldz + t.door_z) - t.village_structure_alignment_y"
+	}
+}

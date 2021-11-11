@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_oasislush"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_riverlush_lilypad_placement",
+			"dunelocked:biomefeatures_riverlush_dirtpatch_placement"
+		]
+	}
+}

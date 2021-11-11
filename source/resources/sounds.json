@@ -1,0 +1,36 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "dunelocked:mummy": {
+                "events": {
+                    "ambient": {
+                        "sound": "mob.zombie.say",
+                        "pitch": [
+                            0.7,
+                            0.75
+                        ]
+                    },
+                    "death": {
+                        "sound": "mob.zombie.death",
+                        "pitch": [
+                            0.7,
+                            0.9
+                        ]
+                    },
+                    "step": {
+                        "sound": "mob.zombie.step",
+                        "pitch": 0.7
+                    },
+                    "hurt": {
+                        "sound": "mob.zombie.hurt",
+                        "pitch": [
+                            0.4,
+                            0.5
+                        ]
+                    }
+                },
+                "volume": 1.0
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_desertrockypainted_strata_terracottagray"
+		},
+
+		"places_feature": "dunelocked:materials_terracottagray",
+
+		"iterations": "math.floor(t.biomecolumn_maximumheight / 13) + 1",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.biomecolumn_maximumheight - 1"],
+			"step_size": 13
+		}
+	}
+}

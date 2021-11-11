@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_crystal_glowstone_placement"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_crystal_glowstone_snap",
+
+		"iterations": "math.random_integer(0, 4)",
+
+		"x": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"y": {
+			"distribution": "uniform",
+			"extent": [
+				"t.lowercave_position",
+				"t.lowercave_terminus"
+			]
+		}
+	}
+}

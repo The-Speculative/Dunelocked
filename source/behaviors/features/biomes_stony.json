@@ -1,0 +1,31 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_stony"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_stony",
+
+		"iterations": "
+			t.biomecolumn_layers_andesite_height = math.floor(t.biomecolumn_maximumheight / 4);
+			t.biomecolumn_layers_stone_position = t.biomecolumn_layers_andesite_height;
+			t.biomecolumn_layers_stone_height = math.floor(t.biomecolumn_maximumheight / 2);
+			t.biomecolumn_layers_granite_position =
+				t.biomecolumn_layers_stone_position
+				+ t.biomecolumn_layers_stone_height
+			;
+			t.biomecolumn_layers_granite_height =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_granite_position
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

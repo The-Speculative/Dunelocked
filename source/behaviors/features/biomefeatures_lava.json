@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_lava"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_lava_diamondore_placement",
+			"dunelocked:biomefeatures_lava_emeraldore_placement",
+			"dunelocked:biomefeatures_lava_lapisore_placement",
+			"dunelocked:biomefeatures_lava_redstoneore_placement",
+			"dunelocked:biomefeatures_lava_hanginglantern_placement",
+			"dunelocked:biomefeatures_lava_stations_placement"
+		]
+	}
+}

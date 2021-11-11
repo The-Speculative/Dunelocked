@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dunelocked:features_buildings"
+		},
+
+		"features": [
+			["dunelocked:structures_well_directions_south", 8],
+			["dunelocked:structures_monument_directions_south", 4],
+			["dunelocked:structures_dungeonssandstone_directions_south", 1]
+		]
+	}
+}

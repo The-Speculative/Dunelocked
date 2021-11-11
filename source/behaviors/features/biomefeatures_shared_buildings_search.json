@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:search_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_shared_buildings_search"
+		},
+
+		"places_feature": "dunelocked:features_buildings",
+
+		"search_volume": {
+			"min": [0, -16, 0],
+			"max": [0, 0, 0]
+		},
+
+		"search_axis": "-y"
+	}
+}

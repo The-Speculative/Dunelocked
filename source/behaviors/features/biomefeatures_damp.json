@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_damp"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_shared_cavevines_placement",
+			"dunelocked:biomefeatures_damp_glowinggiantmushroom_placement",
+			"dunelocked:biomefeatures_damp_glowingmushroom_placement"
+		]
+	}
+}

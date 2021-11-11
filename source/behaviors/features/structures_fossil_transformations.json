@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:structures_fossil_transformations"
+		},
+
+		"features": [
+			"dunelocked:structures_fossil_transformations_",
+			"dunelocked:structures_fossil_transformations"
+		]
+	}
+}

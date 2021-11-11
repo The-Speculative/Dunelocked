@@ -1,0 +1,28 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles_village_hut"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village_hut_east",
+				"condition": "t.village_structure_facingdirection == 0"
+			},
+			{
+				"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village_hut_south",
+				"condition": "t.village_structure_facingdirection == 1"
+			},
+			{
+				"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village_hut_west",
+				"condition": "t.village_structure_facingdirection == 2"
+			},
+			{
+				"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village_hut_north",
+				"condition": "t.village_structure_facingdirection == 3"
+			}
+		]
+	}
+}

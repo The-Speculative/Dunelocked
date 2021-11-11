@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:dimensioncolumns_overworld_dividesfloor"
+		},
+
+		"places_feature": "dunelocked:materials_bedrock",
+
+		"iterations": "t.column_dividefloor_height",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.column_dividefloor_height - 1"]
+		}
+	}
+}

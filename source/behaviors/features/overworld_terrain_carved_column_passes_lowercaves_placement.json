@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain_carved_column_passes_lowercaves_placement"
+		},
+
+		"places_feature": "dunelocked:systems_carverchunkcolumn",
+
+		"iterations": "
+			t.carverchunk_height = t.lowercave_height;
+			t.carverchunk_avoidscenter = 0;
+			t.carverchunk_noisefloor = t.noiseoctaves_cave1;
+			t.carverchunk_noiseceiling = t.noiseoctaves_cave2;
+			t.carverchunk_target = -0.03125;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": "t.lowercave_position"
+	}
+}

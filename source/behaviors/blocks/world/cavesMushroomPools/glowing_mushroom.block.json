@@ -1,0 +1,51 @@
+{
+    "format_version": "1.17.32",
+    "minecraft:block": {
+        "description": {
+            "identifier": "dunelocked:glowing_mushroom"
+        },
+
+        "components": {
+            "tag:plant": {},
+            "minecraft:loot": "loot_tables/blocks/glowing_mushroom.json",
+            "minecraft:breathability": "air",
+            "minecraft:breakonpush": true,
+            
+            "minecraft:map_color": "#5b6d94",
+            "minecraft:block_light_emission": 1.0,
+            "minecraft:block_light_absorption": 0,
+            "minecraft:geometry": "geometry.plant",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "glowing_mushroom", 
+                    "render_method": "alpha_test", 
+                    "face_dimming": false, 
+                    "ambient_occlusion": true 
+                }
+            },
+
+            // "minecraft:placement_filter": {
+            //     "conditions": [
+            //         {
+            //             "allowed_faces": [ "up" ],
+            //             "block_filter": [
+            //                 {
+            //                     "tags": "!query.any_tag('cum')"
+            //                 }
+            //             ]
+            //         }
+            //     ]
+            // },
+            "minecraft:entity_collision": false,
+            "minecraft:pick_collision": {
+                "origin": [ -8, 0, -8 ],
+                "size": [ 16, 3, 16]
+            },
+
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.mushroom"
+            }
+        }
+    }
+}

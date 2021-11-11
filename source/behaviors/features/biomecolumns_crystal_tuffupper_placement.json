@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_crystal_tuffupper_placement"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_crystal_tuffupper",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": "t.biomecolumn_layers_tuffupper_position"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain_carved_column_passes"
+		},
+
+		"features": [
+			"dunelocked:dimensioncolumns_overworld",
+			"dunelocked:overworld_terrain_carved_column_passes_lowercaves_placement",
+			"dunelocked:overworld_terrain_carved_column_passes_uppercaves_placement"
+		]
+	}
+}

@@ -1,0 +1,22 @@
+{
+    "format_version": "1.17.32",
+    "minecraft:block": {
+        "description": {
+            "identifier": "dunelocked:glowing_mushroom_block"
+        },
+
+        "components": {
+            "tag:plant": {},
+            "minecraft:loot": "loot_tables/blocks/glowing_mushroom_block.json",
+
+            "minecraft:destroy_time": 0.5,
+            "minecraft:explosion_resistance": 0.3,
+            "minecraft:map_color": "#77bbbd",
+
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.netherWartBlock"
+            }
+        }
+    }
+}

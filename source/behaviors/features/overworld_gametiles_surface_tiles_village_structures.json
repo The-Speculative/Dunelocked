@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles_village_structures"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:overworld_gametiles_surface_tiles_village_hut",
+				"condition": "t.village_structure_id == 'hut'"
+			}
+		]
+	}
+}

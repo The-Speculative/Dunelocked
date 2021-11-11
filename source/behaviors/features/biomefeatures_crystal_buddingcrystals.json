@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_crystal_buddingcrystals"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_crystal_buddingcrystals_bases",
+			"dunelocked:biomefeatures_crystal_buddingcrystals_crystals"
+		],
+		"early_out": "first_failure"
+	}
+}

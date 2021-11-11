@@ -1,0 +1,79 @@
+{
+    "format_version": "1.17.32",
+    "minecraft:block": {
+        "description": {
+            "identifier": "dunelocked:glowing_mushroom_hyphae",
+            "properties": {
+                "dunelocked:facing_direction": [ 0, 1, 2 ]
+            }
+        },
+        "components": {
+            "tag:wood": {},
+            "minecraft:loot": "loot_tables/blocks/glowing_mushroom_hyphae.json",
+            "minecraft:destroy_time": 0.8,
+            "minecraft:explosion_resistance": 0.5,
+
+            "minecraft:map_color": "#5b6d94",
+            "minecraft:unit_cube": {},
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "glowing_mushroom_hyphae",
+                    "render_method": "opaque"
+                },
+                "ends": {
+                    "texture": "glowing_mushroom_hyphae_top",
+                    "render_method": "opaque"
+                },
+                "up": "ends",
+                "down": "ends"
+            },
+
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.log"
+            },
+            "minecraft:on_player_placing": {
+                "event": "dunelocked:set_facing_direction"
+            }
+        },
+        "events": {
+            "dunelocked:set_facing_direction": {
+                "set_block_property": {
+                    "dunelocked:facing_direction": "math.floor( query.block_face / 2.0 )"
+                }
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('dunelocked:facing_direction') == 0",
+                "components": {
+                    "minecraft:rotation": [
+                        0,
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "condition": "query.block_property('dunelocked:facing_direction') == 1",
+                "components": {
+                    "minecraft:rotation": [
+                        90,
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "condition": "query.block_property('dunelocked:facing_direction') == 2",
+                "components": {
+                    "minecraft:rotation": [
+                        0,
+                        0,
+                        90
+                    ]
+                }
+            }
+        ]
+    }
+}

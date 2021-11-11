@@ -1,0 +1,41 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        // Stone
+        "limestone": {
+            "textures": "textures/blocks/stone/limestone"
+        },
+        "crystalline_limestone": {
+            "textures": "textures/blocks/stone/crystalline_limestone"
+        },
+        "hardslate": {
+            "textures": "textures/blocks/stone/hardslate"
+        },
+        // Mushroom Pools
+        "mycelial_mud_top": {
+            "textures": "textures/blocks/mushroom_pools/mycelial_mud_top"
+        },
+        "mycelial_mud_side": {
+            "textures": "textures/blocks/mushroom_pools/mycelial_mud_side"
+        },
+        "glowing_mushroom_block": {
+            "textures": "textures/blocks/mushroom_pools/glowing_mushroom_block"
+        },
+        "glowing_mushroom_hyphae_top": {
+            "textures": "textures/blocks/mushroom_pools/glowing_mushroom_hyphae_top"
+        },
+        "glowing_mushroom_hyphae": {
+            "textures": "textures/blocks/mushroom_pools/glowing_mushroom_hyphae"
+        },
+        "glowing_mushroom": {
+            "textures": "textures/blocks/mushroom_pools/glowing_mushroom"
+        },
+        //Miscellaneous
+        "mud": {
+            "textures": "textures/blocks/miscellaneous/mud"
+        }
+    },
+    "texture_name": "atlas.terrain"
+}

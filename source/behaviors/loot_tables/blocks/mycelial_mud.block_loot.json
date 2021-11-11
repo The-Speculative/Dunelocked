@@ -1,0 +1,15 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dunelocked:mycelial_mud",
+                    "weight": 1,
+                    "functions": []
+                }
+            ]
+        }
+    ]
+}

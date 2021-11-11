@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles_pyramid_column"
+		},
+
+		"places_feature": "dunelocked:materials_smoothbasalt",
+
+		"iterations": "
+			t.height2 =
+				math.min(
+					t.pyramid_size - math.abs(t.pyramid_center_x - v.originx),
+					t.pyramid_size - math.abs(t.pyramid_center_z - v.originz)
+				)
+			;
+
+			return t.height2;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.height2 - 1"]
+		}
+	}
+}

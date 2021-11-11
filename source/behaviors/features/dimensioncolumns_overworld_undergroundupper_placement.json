@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:dimensioncolumns_overworld_undergroundupper_placement"
+		},
+
+		"places_feature": "dunelocked:slotmaps_upperunderground",
+
+		"iterations": "
+			t.selection_rarity = t.noiseoctaves_biome;
+
+			t.configuration_selectionpadding_rarity = 1 / 4;
+
+			t.domain_maximumheight = t.column_undergroundupper_height;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": "t.column_undergroundupper_position"
+	}
+}

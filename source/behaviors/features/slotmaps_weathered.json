@@ -1,0 +1,67 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:slotmaps_weathered"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:biomes_stony",
+				"condition": "
+					t.selection_rarity < t.slotmaps_weathered_thresholds_rarity_damp_minimum - t.configuration_selectionpadding_rarity ? {
+						t.slotmap_weathered_biome = 'stony';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_damp",
+				"condition": "
+					t.slotmaps_weathered_thresholds_rarity_damp_minimum + t.configuration_selectionpadding_rarity <= t.selection_rarity ? {
+						t.slotmap_weathered_biome = 'damp';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_stonydamptransition",
+				"condition": "
+					t.slotmaps_weathered_thresholds_rarity_damp_minimum - t.configuration_selectionpadding_rarity <= t.selection_rarity
+				&&
+					t.selection_rarity < t.slotmaps_weathered_thresholds_rarity_damp_minimum + t.configuration_selectionpadding_rarity ? {
+						t.slotmap_weathered_biome = 'stony_damp_transition';
+
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_rarity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_weathered_thresholds_rarity_damp_minimum
+							- t.configuration_selectionpadding_rarity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_weathered_thresholds_rarity_damp_minimum
+							+ t.configuration_selectionpadding_rarity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'stony';
+						t.transitionbiome_interpolation_targets_1max = 'damp';
+
+						return 1;
+					};
+				"
+			}
+		]
+	}
+}

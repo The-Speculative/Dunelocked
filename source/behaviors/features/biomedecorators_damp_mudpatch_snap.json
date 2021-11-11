@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.0",
+
+	"minecraft:snap_to_surface_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_damp_mudpatch_snap"
+		},
+
+		"feature_to_snap": "dunelocked:biomedecorators_damp_mudpatch_repositioning",
+
+		"surface": "floor",
+		"vertical_search_range": 24
+	}
+}

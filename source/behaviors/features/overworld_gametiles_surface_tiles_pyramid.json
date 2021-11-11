@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles_pyramid"
+		},
+
+		"places_feature": "dunelocked:overworld_gametiles_surface_tiles_pyramid_layers",
+
+		"iterations": "
+			t.x_int_min = math.max(v.originx, t.pyramid_x_minimum);
+			t.x_int_max = math.min(v.originx + 16, t.pyramid_x_maximum);
+			t.z_int_min = math.max(v.originz, t.pyramid_z_minimum);
+			t.z_int_max = math.min(v.originz + 16, t.pyramid_z_maximum);
+
+			return
+				t.x_int_min < t.x_int_max
+				&& t.z_int_min < t.z_int_max
+			;
+		",
+
+		"x": "t.x_int_min - v.originx",
+		"z": "t.z_int_min - v.originz",
+		"y": "t.pyramid_bottom"
+	}
+}

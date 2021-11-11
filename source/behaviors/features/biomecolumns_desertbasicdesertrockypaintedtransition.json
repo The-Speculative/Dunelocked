@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_desertbasicdesertrockypaintedtransition"
+		},
+
+		"features": [
+			"dunelocked:biomecolumns_desertbasic_limestone",
+			"dunelocked:biomecolumns_desertbasic_sandstone_placement",
+			"dunelocked:biomecolumns_desertbasic_sand_placement",
+			"dunelocked:biomecolumns_shared_water_placement",
+			"dunelocked:biomecolumns_desertrockypainted_strata_placement"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+pack.name=ヅーノロクド
+pack.description=5kのアドーンジャム！
+
+## Blocks
+tile.dunelocked:limestone.name=石灰石
+tile.dunelocked:crystalline_limestone.name=結晶性石灰石
+tile.dunelocked:hardslate.name=ハードスレート
+## TODO

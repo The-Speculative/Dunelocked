@@ -1,0 +1,13 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_lava"
+		},
+
+		"features": [
+			"dunelocked:biomedecorators_lava_lavapatch_placement"
+		]
+	}
+}

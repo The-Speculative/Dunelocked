@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_oasislush_mudpatch_mud_placement"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_oasislush_mudpatch_mud",
+
+		"iterations": 3072,
+
+		"x": {
+			"distribution": "gaussian",
+			"extent": [-12, 12]
+		},
+		"z": {
+			"distribution": "gaussian",
+			"extent": [-12, 12]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [-6, 6]
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_riverlush_mudpatch"
+		},
+
+		"features": [
+			"dunelocked:biomedecorators_riverlush_mudpatch_dirtysand_placement",
+			"dunelocked:biomedecorators_riverlush_mudpatch_mud_placement"
+		]
+	}
+}

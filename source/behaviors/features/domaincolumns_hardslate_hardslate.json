@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:domaincolumns_hardslate_hardslate"
+		},
+
+		"places_feature": "dunelocked:materials_hardslate",
+
+		"iterations": "t.domaincolumn_layers_hardslate_height",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.domaincolumn_layers_hardslate_height - 1"]
+		}
+	}
+}

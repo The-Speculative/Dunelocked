@@ -1,0 +1,45 @@
+{
+    "format_version": [
+        1,
+        1,
+        0
+    ],
+    // Stone
+    "dunelocked:limestone": {
+        "sound": "stone",
+        "textures": "limestone"
+    },
+    "dunelocked:crystalline_limestone": {
+        "sound": "stone",
+        "textures": "crystalline_limestone"
+    },
+    "dunelocked:hardslate": {
+        "sound": "stone",
+        "textures": "hardslate"
+    },
+    // Mushroom Pools
+    "dunelocked:mycelial_mud": {
+        "sound": "moss_carpet",
+        "textures": {
+            "up": "mycelial_mud_top",
+            "down": "mud",
+            "side": "mycelial_mud_side"
+        }
+    },
+    "dunelocked:glowing_mushroom": {
+        "sound": "grass",
+        "textures": "glowing_mushroom"
+    },
+    "dunelocked:glowing_mushroom_hyphae": {
+        "sound": "stem"
+    },
+    "dunelocked:glowing_mushroom_block": {
+        "sound": "wood",
+        "textures": "glowing_mushroom_block"
+    },
+    // Miscellaneous
+    "dunelocked:mud": {
+        "sound": "netherrack",
+        "textures": "mud"
+    }
+}

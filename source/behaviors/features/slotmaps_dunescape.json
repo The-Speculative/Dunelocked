@@ -1,0 +1,1042 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:slotmaps_dunescape"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:biomes_desertflats",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflats",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflats",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity ? {
+						t.slotmap_dunescape_biome = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertdunes",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desert_dunes';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertdunes",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desert_dunes';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertrockypainted",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity <= t.selection_extremity ? {
+						t.slotmap_dunescape_biome = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertrockypainted",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity <= t.selection_extremity ? {
+						t.slotmap_dunescape_biome = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_oasislush",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_oasis_minimum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_oasis_maximum - t.configuration_selectionpadding_aridity ? {
+						t.slotmap_dunescape_biome = 'oasis_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_oasisisland",
+				"condition": "
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_oasis_minimum - t.configuration_selectionpadding_aridity ? {
+						t.slotmap_dunescape_biome = 'desert_island';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_riverlush",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_minimum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_maximum - t.configuration_selectionpadding_aridity ? {
+						t.slotmap_dunescape_biome = 'river_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertdunestransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertdunes_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_dunes';
+						t.transitionbiome_interpolation_targets_1max = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertdunestransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertdunes_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_dunes';
+						t.transitionbiome_interpolation_targets_1max = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertdunestransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertdunes_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max = 'desert_dunes';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertdunestransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertdunes_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 2;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+						t.transitionbiome_interpolation_dimensions_2_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_2_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_2_value
+								- t.transitionbiome_interpolation_dimensions_2_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_2_max
+									- t.transitionbiome_interpolation_dimensions_2_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min_2min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1min_2max = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max_2min = 'desert_dunes';
+						t.transitionbiome_interpolation_targets_1max_2max = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertrockypaintedtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertrockypainted_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertrockypaintedtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertrockypainted_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertrockypaintedtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity <= t.selection_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertrockypainted_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertrockypaintedtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertrockypainted_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 2;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+						t.transitionbiome_interpolation_dimensions_2_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_2_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_2_value
+								- t.transitionbiome_interpolation_dimensions_2_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_2_max
+									- t.transitionbiome_interpolation_dimensions_2_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min_2min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1min_2max = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max_2min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max_2max = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsoasislushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_oasis_maximum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity ? {
+						t.slotmap_dunescape_biome = 'desertflats_oasislush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'oasis_lush';
+						t.transitionbiome_interpolation_targets_1max = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_oasislushoasisislandtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_oasis_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_oasis_minimum + t.configuration_selectionpadding_aridity ? {
+						t.slotmap_dunescape_biome = 'oasislush_oasisisland_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_oasis_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_oasis_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'oasis_island';
+						t.transitionbiome_interpolation_targets_1max = 'oasis_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max = 'river_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertdunesriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertdunes_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max = 'desert_dunes';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertdunesriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertdunes_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_dunes';
+						t.transitionbiome_interpolation_targets_1max = 'river_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertrockypaintedriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity <= t.selection_extremity ? {
+						t.slotmap_dunescape_biome = 'desertrockypainted_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertrockypaintedriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity <= t.selection_extremity ? {
+						t.slotmap_dunescape_biome = 'desertrockypainted_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 1;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'desert_rocky_painted';
+						t.transitionbiome_interpolation_targets_1max = 'river_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertdunesriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertdunes_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 2;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+						t.transitionbiome_interpolation_dimensions_2_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_2_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_2_value
+								- t.transitionbiome_interpolation_dimensions_2_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_2_max
+									- t.transitionbiome_interpolation_dimensions_2_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min_2min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1min_2max = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max_2min = 'desert_dunes';
+						t.transitionbiome_interpolation_targets_1max_2max = 'desert_flats';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertdunesriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_minimum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_minimum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertdunes_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 2;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+						t.transitionbiome_interpolation_dimensions_2_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_2_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_minimum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_2_value
+								- t.transitionbiome_interpolation_dimensions_2_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_2_max
+									- t.transitionbiome_interpolation_dimensions_2_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min_2min = 'desert_dunes';
+						t.transitionbiome_interpolation_targets_1min_2max = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max_2min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max_2max = 'river_lush';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertrockypaintedriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_maximum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertrockypainted_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 2;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+						t.transitionbiome_interpolation_dimensions_2_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_2_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_2_value
+								- t.transitionbiome_interpolation_dimensions_2_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_2_max
+									- t.transitionbiome_interpolation_dimensions_2_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min_2min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1min_2max = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max_2min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1max_2max = 'desert_rocky_painted';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_desertflatsdesertrockypaintedriverlushtransition",
+				"condition": "
+					t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity <= t.selection_aridity
+				&&
+					t.selection_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum + t.configuration_selectionpadding_aridity
+				&&
+					t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity <= t.selection_extremity
+				&&
+					t.selection_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum + t.configuration_selectionpadding_extremity ? {
+						t.slotmap_dunescape_biome = 'desertflats_desertrockypainted_riverlush_transition';
+
+						t.transitionbiome_interpolation_dimensioncount = 2;
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_aridity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							- t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_dunescape_thresholds_aridity_river_minimum
+							+ t.configuration_selectionpadding_aridity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+						t.transitionbiome_interpolation_dimensions_2_value = t.selection_extremity;
+						t.transitionbiome_interpolation_dimensions_2_min =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							- t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_max =
+							t.slotmaps_dunescape_thresholds_extremity_flats_maximum
+							+ t.configuration_selectionpadding_extremity
+						;
+						t.transitionbiome_interpolation_dimensions_2_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_2_value
+								- t.transitionbiome_interpolation_dimensions_2_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_2_max
+									- t.transitionbiome_interpolation_dimensions_2_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min_2min = 'desert_flats';
+						t.transitionbiome_interpolation_targets_1min_2max = 'desert_rocky_painted';
+						t.transitionbiome_interpolation_targets_1max_2min = 'river_lush';
+						t.transitionbiome_interpolation_targets_1max_2max = 'river_lush';
+
+						return 1;
+					};
+				"
+			}
+		]
+	}
+}

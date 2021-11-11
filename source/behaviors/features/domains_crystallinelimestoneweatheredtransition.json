@@ -1,0 +1,50 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:domains_crystallinelimestoneweatheredtransition"
+		},
+
+		"places_feature": "dunelocked:domaincolumns_crystallinelimestoneweatheredtransition",
+
+		"iterations": "
+			t.crystallinelimestone_height_minimum =
+				math.floor(
+					3
+					+ (
+						5 * t.noiseoctaves_patch
+						+ 1 * t.noiseoctaves_block
+					)
+						/ 6
+						* 2
+				)
+			;
+
+			t.domaincolumn_layers_crystallinelimestone_height =
+				t.crystallinelimestone_height_minimum
+				+ (
+					t.domain_maximumheight
+					- t.crystallinelimestone_height_minimum
+				)
+					* math.hermite_blend(
+						(0.25 - t.column_tileselector) / 0.25
+					)
+			;
+			t.domaincolumn_layers_crystallinelimestone_position =
+				t.domain_maximumheight
+				- t.domaincolumn_layers_crystallinelimestone_height
+			;
+
+			t.domaincolumn_layers_weathered_height =
+				t.domaincolumn_layers_crystallinelimestone_position
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

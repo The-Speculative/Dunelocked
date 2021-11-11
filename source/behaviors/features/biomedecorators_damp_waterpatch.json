@@ -1,0 +1,28 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_damp_waterpatch"
+		},
+
+		"places_block": "minecraft:water",
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false,
+		"may_replace": [
+			"minecraft:dirt",
+			"dunelocked:mycelial_mud"
+		],
+		"may_attach_to": {
+			"top": "minecraft:air",
+			"sides": [
+				"minecraft:water",
+				"minecraft:dirt",
+				"dunelocked:mycelial_mud",
+				"dunelocked:mud",
+				"minecraft:stone"
+			]
+		}
+	}
+}

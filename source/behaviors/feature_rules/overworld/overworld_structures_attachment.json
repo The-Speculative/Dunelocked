@@ -1,0 +1,31 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "dunelocked:overworld_structures_attachment",
+			"places_feature": "dunelocked:overworld_structures"
+		},
+
+		"conditions": {
+			"placement_pass": "final_pass",
+
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"value": "overworld"
+			}
+		},
+
+		"distribution": {
+			"iterations": "
+				math.floor(t.pyramid_center_x / 16) == v.originx / 16
+				&& math.floor(t.pyramid_center_z / 16) == v.originz / 16
+				&& 0
+			",
+
+			"x": 0,
+			"z": 0,
+			"y": "t.uppercave_position"
+		}
+	}
+}

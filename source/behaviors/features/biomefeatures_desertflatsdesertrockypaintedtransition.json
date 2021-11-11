@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_desertflatsdesertrockypaintedtransition"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_shared_fossil_placement",
+			"dunelocked:biomefeatures_shared_buildings_placement"
+		]
+	}
+}

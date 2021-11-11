@@ -1,0 +1,72 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_decorators_surface"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflats",
+				"condition": "t.slotmap_dunescape_biome == 'desert_flats'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertdunes",
+				"condition": "t.slotmap_dunescape_biome == 'desert_dunes'"
+			},
+			// {
+			// 	"places_feature": "dunelocked:biomedecorators_desertrockypainted",
+			// 	"condition": "t.slotmap_dunescape_biome == 'desert_rocky_painted'"
+			// },
+			{
+				"places_feature": "dunelocked:biomedecorators_oasislush",
+				"condition": "t.slotmap_dunescape_biome == 'oasis_lush'"
+			},
+			// {
+			// 	"places_feature": "dunelocked:biomedecorators_oasisisland",
+			// 	"condition": "t.slotmap_dunescape_biome == 'oasis_island'"
+			// },
+			{
+				"places_feature": "dunelocked:biomedecorators_riverlush",
+				"condition": "t.slotmap_dunescape_biome == 'river_lush'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflatsdesertdunestransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertflats_desertdunes_transition'"
+			},
+			// {
+			// 	"places_feature": "dunelocked:biomedecorators_desertflatsdesertrockypaintedtransition",
+			// 	"condition": "t.slotmap_dunescape_biome == 'desertflats_desertrockypainted_transition'"
+			// },
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflatsoasislushtransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertflats_oasislush_transition'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflatsriverlushtransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertflats_riverlush_transition'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertdunesriverlushtransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertdunes_riverlush_transition'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertrockypaintedriverlushtransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertrockypainted_riverlush_transition'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_oasislushoasisislandtransition",
+				"condition": "t.slotmap_dunescape_biome == 'oasislush_oasisisland_transition'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflatsdesertdunesriverlushtransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertflats_desertdunes_riverlush_transition'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflatsdesertrockypaintedriverlushtransition",
+				"condition": "t.slotmap_dunescape_biome == 'desertflats_desertrockypainted_riverlush_transition'"
+			}
+		]
+	}
+}

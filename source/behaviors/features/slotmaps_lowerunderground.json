@@ -1,0 +1,43 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:slotmaps_lowerunderground"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:domains_hardslate",
+				"condition": "
+					!t.pyramid_generates || t.column_tileselector <= 0 ? {
+						t.slotmap_lowerunderground_domain = 'hardslate';
+						t.slotmap_illuminated_biome = 'hardslate';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:domains_illuminated",
+				"condition": "
+					0.25 < t.column_tileselector ? {
+						t.slotmap_lowerunderground_domain = 'illuminated';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:domains_hardslateilluminatedtransition",
+				"condition": "
+					0 < t.column_tileselector && t.column_tileselector <= 0.25 ? {
+						t.slotmap_lowerunderground_domain = 'hardslate_illuminated_transition';
+
+						return 1;
+					};
+				"
+			}
+		]
+	}
+}

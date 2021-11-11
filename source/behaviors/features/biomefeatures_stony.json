@@ -1,0 +1,19 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_stony"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_stony_goldore_placement",
+			"dunelocked:biomefeatures_stony_ironore_placement",
+			"dunelocked:biomefeatures_stony_coalore_placement",
+			"dunelocked:biomefeatures_stony_copperore_placement",
+			"dunelocked:biomefeatures_stony_hanginglantern_placement",
+			"dunelocked:biomefeatures_stony_stations_placement",
+			"dunelocked:biomefeatures_shared_cavevines_placement"
+		]
+	}
+}

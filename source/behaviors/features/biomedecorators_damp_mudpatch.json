@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_damp_mudpatch"
+		},
+
+		"features": [
+			"dunelocked:biomedecorators_damp_mudpatch_mud_span",
+			"dunelocked:biomedecorators_damp_mudpatch_mycelialmud_placement"
+		]
+	}
+}

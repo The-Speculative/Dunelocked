@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:domaincolumns_crystallinelimestoneweatheredtransition"
+		},
+
+		"features": [
+			"dunelocked:domaincolumns_crystallinelimestoneweatheredtransition_weatheredslot_placement",
+			"dunelocked:domaincolumns_crystallinelimestone_crystallinelimestone_placement"
+		]
+	}
+}

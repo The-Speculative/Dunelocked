@@ -1,0 +1,29 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "dunelocked:glowing_mushroom_item",
+            "category": "nature"
+        },
+        "components": {
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.mushroom"
+            },
+            "minecraft:icon": {
+                "texture": "glowing_mushroom"
+            },
+            "minecraft:block_placer": {
+                "block": "dunelocked:glowing_mushroom",
+                "use_on": [
+                    "minecraft:dirt",
+                    "minecraft:gravel",
+                    "minecraft:sand",
+                    "dunelocked:mud",
+                    "dunelocked:mycelial_mud",
+                    "minecraft:stone",
+                    "minecraft:mycelium"
+                ]
+            }
+        }
+    }
+}

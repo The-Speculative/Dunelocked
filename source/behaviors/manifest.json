@@ -1,0 +1,39 @@
+{
+	"format_version": 2,
+
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"uuid": "6a6fa78d-1715-4489-963f-d1b51ca48072",
+		"version": [1, 0, 0],
+
+		"min_engine_version": [1, 17, 0]
+	},
+	"metadata": {
+		"authors": [
+			"Grimm",
+			"Yanagi",
+			"Ciosciaa",
+			"Chippy",
+			"Vinni",
+			"MADLAD"
+		],
+		"license": "CC-BY-NC-SA-4.0"
+	},
+
+	"modules": [
+		{
+			"type": "data",
+
+			"description": "Behaviors",
+			"uuid": "618e3387-9671-43df-af3a-1ae8aee1412d",
+			"version": [1, 0, 0]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "1bb7b76a-1ee5-4a0e-b251-1638022148e8",
+			"version": [1, 0, 0]
+		}
+	]
+}

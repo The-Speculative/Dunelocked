@@ -1,0 +1,19 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "dunelocked:hall_carver",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:icon": {
+                "texture": "stick"
+            },
+            "minecraft:block_placer": {
+                "block": "dunelocked:hall_carving",
+                "use_block_description": true
+            }
+        }
+    }
+}

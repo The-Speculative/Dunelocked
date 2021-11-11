@@ -1,0 +1,23 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_surface_tiles_pyramid_layers"
+		},
+
+		"places_feature": "dunelocked:overworld_gametiles_surface_tiles_pyramid_column",
+
+		"iterations": "(t.x_int_max - t.x_int_min) * (t.z_int_max - t.z_int_min)",
+
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, "(t.x_int_max - t.x_int_min) - 1"]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, "(t.z_int_max - t.z_int_min) - 1"]
+		},
+		"y": 0
+	}
+}

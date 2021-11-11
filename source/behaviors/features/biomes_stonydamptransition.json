@@ -1,0 +1,66 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_stonydamptransition"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_stonydamptransition",
+
+		"iterations": "
+			t.biomecolumn_layers_andesite_height =
+				math.floor(
+					(t.biomecolumn_maximumheight / 4)
+					- (t.biomecolumn_maximumheight / 4)
+						* math.hermite_blend(t.transitionbiome_interpolation_dimensions_1_ratio)
+				)
+			;
+			t.biomecolumn_layers_coarsedirt_position = t.biomecolumn_layers_andesite_height;
+			t.biomecolumn_layers_coarsedirt_height =
+				math.floor(
+					(t.biomecolumn_maximumheight * 2 / 3)
+						* math.hermite_blend(t.transitionbiome_interpolation_dimensions_1_ratio)
+				)
+			;
+			t.biomecolumn_layers_stone_position =
+				t.biomecolumn_layers_coarsedirt_position
+				+ t.biomecolumn_layers_coarsedirt_height
+			;
+			t.biomecolumn_layers_stone_height =
+				math.floor(
+					(t.biomecolumn_maximumheight / 2)
+						- (t.biomecolumn_maximumheight / 2)
+							* math.hermite_blend(t.transitionbiome_interpolation_dimensions_1_ratio)
+				)
+			;
+			t.biomecolumn_layers_terracotta_position =
+				t.biomecolumn_layers_stone_position
+				+ t.biomecolumn_layers_stone_height
+			;
+			t.biomecolumn_layers_terracotta_height =
+				math.floor(
+					(
+						t.biomecolumn_maximumheight
+						- t.biomecolumn_layers_terracotta_position
+					)
+						* math.hermite_blend(t.transitionbiome_interpolation_dimensions_1_ratio)
+				)
+			;
+			t.biomecolumn_layers_granite_position =
+				t.biomecolumn_layers_terracotta_position
+				+ t.biomecolumn_layers_terracotta_height
+			;
+			t.biomecolumn_layers_granite_height =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_granite_position
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

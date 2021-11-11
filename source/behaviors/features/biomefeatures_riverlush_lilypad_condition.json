@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_riverlush_lilypad_condition"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_riverlush_lilypad",
+
+		"iterations": "0.5 <= math.abs(query.noise(v.worldx / 128, v.worldz / 128))",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

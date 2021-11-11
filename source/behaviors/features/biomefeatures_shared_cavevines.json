@@ -1,0 +1,23 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:growing_plant_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_shared_cavevines"
+		},
+
+		"body_blocks": [
+			["minecraft:cave_vines", 4],
+			["minecraft:cave_vines_body_with_berries", 1]
+		],
+		"head_blocks": [
+			["minecraft:cave_vines", 4],
+			["minecraft:cave_vines_head_with_berries", 1]
+		],
+		"age": {"range_min": 16, "range_max": 25},
+
+		"growth_direction": "down",
+		"height_distribution": [
+			[{"range_min": 8, "range_max": 12}, 1]
+		]
+	}
+}
