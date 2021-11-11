@@ -1,0 +1,67 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:slotmaps_illuminated"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:biomes_lava",
+				"condition": "
+					t.selection_rarity < t.slotmaps_illuminated_thresholds_rarity_crystal_minimum - t.configuration_selectionpadding_rarity ? {
+						t.slotmap_illuminated_biome = 'lava';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_crystal",
+				"condition": "
+					t.slotmaps_illuminated_thresholds_rarity_crystal_minimum + t.configuration_selectionpadding_rarity <= t.selection_rarity ? {
+						t.slotmap_illuminated_biome = 'crystal';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:biomes_lavacrystaltransition",
+				"condition": "
+					t.slotmaps_illuminated_thresholds_rarity_crystal_minimum - t.configuration_selectionpadding_rarity <= t.selection_rarity
+				&&
+					t.selection_rarity < t.slotmaps_illuminated_thresholds_rarity_crystal_minimum + t.configuration_selectionpadding_rarity ? {
+						t.slotmap_illuminated_biome = 'lava_crystal_transition';
+
+						t.transitionbiome_interpolation_dimensions_1_value = t.selection_rarity;
+						t.transitionbiome_interpolation_dimensions_1_min =
+							t.slotmaps_illuminated_thresholds_rarity_crystal_minimum
+							- t.configuration_selectionpadding_rarity
+						;
+						t.transitionbiome_interpolation_dimensions_1_max =
+							t.slotmaps_illuminated_thresholds_rarity_crystal_minimum
+							+ t.configuration_selectionpadding_rarity
+						;
+						t.transitionbiome_interpolation_dimensions_1_ratio =
+							(
+								t.transitionbiome_interpolation_dimensions_1_value
+								- t.transitionbiome_interpolation_dimensions_1_min
+							)
+								/ (
+									t.transitionbiome_interpolation_dimensions_1_max
+									- t.transitionbiome_interpolation_dimensions_1_min
+								)
+						;
+
+						t.transitionbiome_interpolation_targets_1min = 'lava';
+						t.transitionbiome_interpolation_targets_1max = 'crystal';
+
+						return 1;
+					};
+				"
+			}
+		]
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_oasislush_mudpatch_condition_water"
+		},
+
+		"places_block": "minecraft:water",
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false,
+		"may_replace": ["minecraft:water"],
+		"may_attach_to": {
+			"sides": [
+				"minecraft:sand",
+				"minecraft:dirt",
+				"minecraft:moss_block",
+				"dunelocked:mud",
+				"minecraft:grass"
+			],
+			"min_sides_must_attach": 1
+		}
+	}
+}

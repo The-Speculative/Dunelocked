@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_features"
+		},
+
+		"features": [
+			"dunelocked:overworld_features_lowerunderground",
+			"dunelocked:overworld_features_upperunderground",
+			"dunelocked:overworld_features_surface"
+		]
+	}
+}

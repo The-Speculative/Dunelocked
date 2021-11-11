@@ -1,0 +1,14 @@
+{
+    "resource_pack_name": "Vanilla",
+    "texture_data": {
+        "glowing_mushroom": {
+            "textures": "textures/blocks/mushroom_pools/glowing_mushroom"
+        },
+        "customSpawnEgg": {
+            "textures": [
+                "textures/items/spawn_eggs/mummy"
+            ]
+        }
+    },
+    "texture_name": "atlas.items"
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_desertrockypainted_strata_placement"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_desertrockypainted_strata",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": "t.biomecolumn_passes_strata_position"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_structures_pyramidinterior"
+		},
+
+		"places_feature": "dunelocked:structures_pyramid_interior_directions_south",
+
+		"iterations": 1,
+
+		"x": -16,
+		"z": -7,
+		"y": "t.pyramid_bottom + t.pyramid_size - 16 - v.originy - 2"
+	}
+}

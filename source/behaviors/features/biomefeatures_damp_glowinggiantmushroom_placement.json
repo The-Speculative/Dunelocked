@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_damp_glowinggiantmushroom_placement"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_damp_glowinggiantmushroom_snap",
+
+		"iterations": "math.random_integer(4, 8)",
+
+		"x": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"y": {
+			"distribution": "uniform",
+			"extent": [
+				"t.uppercave_position",
+				"t.uppercave_terminus"
+			]
+		}
+	}
+}

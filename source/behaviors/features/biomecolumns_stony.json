@@ -1,0 +1,15 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_stony"
+		},
+
+		"features": [
+			"dunelocked:biomecolumns_stony_andesite",
+			"dunelocked:biomecolumns_stony_stone_placement",
+			"dunelocked:biomecolumns_stony_granite_placement"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:features_lushdecorations_tallfern"
+		},
+
+		"features": [
+			"dunelocked:features_lushdecorations_tallfern_lower",
+			"dunelocked:features_lushdecorations_tallfern_upper_placement"
+		]
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.16.200",
+  "minecraft:block": {
+    "description": {
+      "identifier": "dunelocked:hall_carving"
+    },
+    "components": {
+      "minecraft:destroy_time": 1,
+      "minecraft:block_light_absorption": 1,
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:ticking": {
+        "looping": false,
+        "range": [
+          0,
+          0
+        ],
+        "on_tick": {
+          "event": "break",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "break": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "fill ~1 ~2 ~1 ~-1 ~-1 ~-1 air"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

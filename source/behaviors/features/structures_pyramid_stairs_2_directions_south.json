@@ -1,0 +1,13 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "dunelocked:structures_pyramid_stairs_2_directions_south"
+		},
+
+		"structure_name": "dunelocked:pyramid/stairs/2",
+
+		"facing_direction": "south",
+		"constraints": {}
+	}
+}

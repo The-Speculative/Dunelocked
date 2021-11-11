@@ -1,0 +1,42 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_oasisisland"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_desertoasis",
+
+		"iterations": "
+			t.biomecolumn_terminus =
+				t.dimension_sealevel
+				+ 4
+				+ 4 * t.noiseoctaves_local
+				+ 2 * t.noiseoctaves_cave1
+			;
+			t.biomecolumn_maximumheight = t.biomecolumn_terminus - v.originy;
+			t.biomecolumn_layers_moss_height = 2;
+			t.biomecolumn_layers_moss_position =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_moss_height
+			;
+			t.biomecolumn_layers_limestone_height =
+				math.floor(t.biomecolumn_maximumheight / 3)
+			;
+			t.biomecolumn_layers_sandstone_position = t.biomecolumn_layers_limestone_height;
+			t.biomecolumn_layers_sandstone_height =
+				t.biomecolumn_layers_moss_position
+				- t.biomecolumn_layers_sandstone_position
+			;
+			t.biomecolumn_layers_globalwater_position = t.biomecolumn_maximumheight;
+			t.biomecolumn_layers_globalwater_height = t.dimension_sealevel - t.biomecolumn_terminus;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

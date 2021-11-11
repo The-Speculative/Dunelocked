@@ -1,0 +1,38 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_desertrockypainted"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_desertrockypainted",
+
+		"iterations": "
+			t.biomecolumn_terminus =
+				t.dimension_sealevel
+				+ 48
+				+ 16 * math.hermite_blend(math.abs(t.noiseoctaves_biome))
+				+ 8 * math.hermite_blend(math.abs(t.noiseoctaves_chippy2))
+			;
+			t.biomecolumn_maximumheight = t.biomecolumn_terminus - v.originy;
+			t.biomecolumn_layers_limestone_height =
+				math.floor(t.biomecolumn_maximumheight / 3)
+			;
+			t.biomecolumn_layers_sandstone_position = t.biomecolumn_layers_limestone_height;
+			t.biomecolumn_layers_sandstone_height =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_sandstone_position
+			;
+			t.biomecolumn_layers_globalwater_position = t.biomecolumn_maximumheight;
+			t.biomecolumn_layers_globalwater_height = t.dimension_sealevel - t.biomecolumn_terminus;
+			t.biomecolumn_passes_strata_position = 0;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:structures_fossil_directions"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:structures_fossil_directions_east",
+				"condition": "t.structure_direction_adjusted == 0"
+			},
+			{
+				"places_feature": "dunelocked:structures_fossil_directions_south",
+				"condition": "t.structure_direction_adjusted == 1"
+			},
+			{
+				"places_feature": "dunelocked:structures_fossil_directions_west",
+				"condition": "t.structure_direction_adjusted == 2"
+			},
+			{
+				"places_feature": "dunelocked:structures_fossil_directions_north",
+				"condition": "t.structure_direction_adjusted == 3"
+			}
+		]
+	}
+}

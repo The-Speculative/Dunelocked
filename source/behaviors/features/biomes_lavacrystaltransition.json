@@ -1,0 +1,49 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_lavacrystaltransition"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_lavacrystaltransition",
+
+		"iterations": "
+			t.biomecolumn_layers_basalt_height =
+				math.floor(
+					(t.biomecolumn_maximumheight / 3)
+					- (t.biomecolumn_maximumheight / 3)
+						* math.hermite_blend(t.transitionbiome_interpolation_dimensions_1_ratio)
+				)
+			;
+			t.biomecolumn_layers_deepslate_height =
+				math.floor(
+					(
+						t.biomecolumn_maximumheight
+						- t.biomecolumn_layers_basalt_height
+					)
+					- (
+						t.biomecolumn_maximumheight
+						- t.biomecolumn_layers_basalt_height
+					)
+						* math.hermite_blend(t.transitionbiome_interpolation_dimensions_1_ratio)
+				)
+			;
+			t.biomecolumn_layers_deepslate_position =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_deepslate_height
+			;
+			t.biomecolumn_layers_crystalcolumn_position = t.biomecolumn_layers_basalt_height;
+			t.biomecolumn_layers_crystalcolumn_height =
+				t.biomecolumn_layers_deepslate_position
+				- t.biomecolumn_layers_crystalcolumn_position
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_riverlush_dirtpatch_placement"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_riverlush_dirtpatch",
+
+		"iterations": "
+			t.patch_size_x = math.random_integer(4, 12);
+			t.patch_size_z = math.random_integer(4, 12);
+
+			return 1;
+		",
+
+		"x": {
+			"distribution": "uniform",
+			"extent": [4, 12]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [4, 12]
+		},
+		"y": 0
+	}
+}

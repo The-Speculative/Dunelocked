@@ -1,0 +1,29 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_lava_hanginglantern_placement"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_shared_hanginglantern_snap",
+
+		"iterations": 0,
+
+		"x": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"y": {
+			"distribution": "uniform",
+			"extent": [
+				"t.lowercave_position",
+				"t.lowercave_terminus"
+			]
+		}
+	}
+}

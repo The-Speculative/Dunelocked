@@ -1,0 +1,27 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_shared_cacti_placement_condition"
+		},
+
+		"places_feature": "dunelocked:features_cactus",
+
+		"iterations": "
+			t.column_maxheight = query.above_top_solid(v.worldx, v.worldz);
+
+			return
+				query.noise(v.originx / 16, v.originz / 64) <= -0.5
+				&&
+					(t.column_maxheight - t.dimension_sealevel)
+					- math.random_integer(0, 4)
+					> 8
+			;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": "t.column_maxheight"
+	}
+}

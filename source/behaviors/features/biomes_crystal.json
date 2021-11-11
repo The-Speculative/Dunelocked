@@ -1,0 +1,41 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_crystal"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_crystal",
+
+		"iterations": "
+			t.biomecolumn_layers_tufflower_height = 1;
+			t.biomecolumn_layers_calcitelower_position = t.biomecolumn_layers_tufflower_height;
+			t.biomecolumn_layers_calcitelower_height = 2;
+			t.biomecolumn_layers_tuffupper_height = 1;
+			t.biomecolumn_layers_tuffupper_position =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_tuffupper_height
+			;
+			t.biomecolumn_layers_calciteupper_height = 2;
+			t.biomecolumn_layers_calciteupper_position =
+				t.biomecolumn_layers_tuffupper_position
+				- t.biomecolumn_layers_calciteupper_height
+			;
+			t.biomecolumn_layers_amethyst_position =
+				t.biomecolumn_layers_calcitelower_position
+				+ t.biomecolumn_layers_calcitelower_height
+			;
+			t.biomecolumn_layers_amethyst_height =
+				t.biomecolumn_layers_calciteupper_position
+				- t.biomecolumn_layers_amethyst_position
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

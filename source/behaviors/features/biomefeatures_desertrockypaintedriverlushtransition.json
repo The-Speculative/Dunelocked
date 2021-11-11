@@ -1,0 +1,13 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_desertrockypaintedriverlushtransition"
+		},
+
+		"features": [
+			"dunelocked:biomefeatures_riverlush"
+		]
+	}
+}

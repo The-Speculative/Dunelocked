@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "crystalline_limestone",
+        "metalness_emissive_roughness": [0,0,232],
+        "heightmap": "crystalline_limestone_heightmap"
+    }
+}

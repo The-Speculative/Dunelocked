@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_riverlush_mudpatch_dirtysand"
+		},
+
+		"places_block": "minecraft:dirt",
+
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false,
+		"may_replace": [
+			"minecraft:sand",
+			"minecraft:sandstone"
+		]
+	}
+}

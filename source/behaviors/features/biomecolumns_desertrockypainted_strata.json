@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_desertrockypainted_strata"
+		},
+
+		"features": [
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottablack",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottawhite",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottabrown",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottagray",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracotta1",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracotta2",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracotta3",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottasilver1",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottasilver2",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottared1",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottared2",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottaorange1",
+			"dunelocked:biomecolumns_desertrockypainted_strata_terracottaorange2"
+		]
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_stony_copperore"
+		},
+
+		"count": 32,
+		"replace_rules": [
+			{
+				"places_block": "minecraft:copper_ore",
+				"may_replace": [
+					{
+						"name": "minecraft:stone",
+						"states": {"stone_type": "stone"}
+					}
+				]
+			}
+		]
+	}
+}

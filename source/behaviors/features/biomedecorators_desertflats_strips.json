@@ -1,0 +1,36 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_desertflats_strips"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:biomedecorators_desertflats_strips_water_checker",
+				"condition": "t.strip_selection <= -(13 / 16)"
+			},
+			{
+				"places_feature": "dunelocked:materials_moss",
+				"condition": "-(13 / 16) < t.strip_selection && t.strip_selection <= -(10 / 16)"
+			},
+			{
+				"places_feature": "dunelocked:materials_grass",
+				"condition": "-(10 / 16) < t.strip_selection && t.strip_selection <= -(7 / 16)"
+			},
+			{
+				"places_feature": "dunelocked:materials_dirt",
+				"condition": "-(7 / 16) < t.strip_selection && t.strip_selection <= -(4 / 16)"
+			},
+			{
+				"places_feature": "dunelocked:materials_coarsedirt",
+				"condition": "-(4 / 16) < t.strip_selection && t.strip_selection <= -(1 / 16)"
+			},
+			{
+				"places_feature": "dunelocked:materials_redsand",
+				"condition": "0.75 < t.strip_selection"
+			}
+		]
+	}
+}

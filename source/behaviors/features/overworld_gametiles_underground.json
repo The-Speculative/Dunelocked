@@ -1,0 +1,31 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_underground"
+		},
+
+		"places_feature": "dunelocked:overworld_gametiles_underground_tiles",
+
+		"iterations": "
+			t.gametile_size = 256;
+
+			t.gametile_origin_x = t.gametile_size * math.floor(v.originx / t.gametile_size);
+			t.gametile_origin_z = t.gametile_size * math.floor(v.originz / t.gametile_size);
+
+			t.gametile_selector =
+				query.noise(
+					t.gametile_origin_x + 16,
+					t.gametile_origin_z - 12
+				)
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

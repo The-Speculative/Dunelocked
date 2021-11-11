@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:systems_carverchunkcolumn"
+		},
+
+		"places_feature": "dunelocked:systems_carverchunkcolumn_block",
+
+		"iterations": "t.carverchunk_origin = v.originy; return t.carverchunk_height;",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.carverchunk_height - 1"]
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+    "format_version": "1.17.32",
+    "minecraft:block": {
+        "description": {
+            "identifier": "dunelocked:mycelial_mud"
+        },
+
+        "components": {
+            "tag:stone": {},
+            "tag:wood_pick_diggable": {},
+            "tag:mud": {},
+            "tag:dirt": {},
+            "minecraft:loot": "loot_tables/empty.json",
+
+            "minecraft:destroy_time": 0.8,
+            "minecraft:explosion_resistance": 1.0,
+            "minecraft:map_color": "#7193c0",
+
+            "minecraft:creative_category": {
+                "category": "nature"
+            },
+
+            "minecraft:on_player_destroyed": {
+                "event": "blockDestroyed",
+                "condition": "q.equipped_item_any_tag('slot.weapon.mainhand','minecraft:wooden_tier','minecraft:stone_tier','minecraft:iron_tier','minecraft:golden_tier','minecraft:diamond_tier','minecraft:netherite_tier')"
+            }
+        },
+        "events": {
+            "blockDestroyed": {
+                "spawn_loot": {
+                    "table": "loot_tables/blocks/mycelial_mud.json"
+                }
+            }
+        }
+    }
+}

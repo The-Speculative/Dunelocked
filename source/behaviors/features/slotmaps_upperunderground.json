@@ -1,0 +1,43 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:slotmaps_upperunderground"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:domains_crystallinelimestone",
+				"condition": "
+					!t.pyramid_generates || t.column_tileselector <= 0 ? {
+						t.slotmap_upperunderground_domain = 'crystallinelimestone';
+						t.slotmap_weathered_biome = 'crystallinelimestone';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:domains_weathered",
+				"condition": "
+					0.25 < t.column_tileselector ? {
+						t.slotmap_upperunderground_domain = 'weathered';
+
+						return 1;
+					};
+				"
+			},
+			{
+				"places_feature": "dunelocked:domains_crystallinelimestoneweatheredtransition",
+				"condition": "
+					0 < t.column_tileselector && t.column_tileselector <= 0.25 ? {
+						t.slotmap_upperunderground_domain = 'crystallinelimestone_weathered_transition';
+
+						return 1;
+					};
+				"
+			}
+		]
+	}
+}

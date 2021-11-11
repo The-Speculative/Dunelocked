@@ -1,0 +1,16 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:dimensioncolumns_overworld"
+		},
+
+		"features": [
+			"dunelocked:dimensioncolumns_overworld_dividesfloor",
+			"dunelocked:dimensioncolumns_overworld_undergroundlower_placement",
+			"dunelocked:dimensioncolumns_overworld_undergroundupper_placement",
+			"dunelocked:dimensioncolumns_overworld_surface_placement"
+		]
+	}
+}

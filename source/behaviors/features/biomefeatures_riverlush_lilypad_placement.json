@@ -1,0 +1,23 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_riverlush_lilypad_placement"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_riverlush_lilypad_condition",
+
+		"iterations": "math.random_integer(8, 32)",
+
+		"x": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"z": {
+			"distribution": "uniform",
+			"extent": [0, 16]
+		},
+		"y": "t.dimension_sealevel"
+	}
+}

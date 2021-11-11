@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_structures"
+		},
+
+		"features": [
+			"dunelocked:overworld_structures_pyramidinterior",
+			"dunelocked:overworld_structures_stairs1",
+			"dunelocked:overworld_structures_stairs2",
+			"dunelocked:overworld_structures_stairs3",
+			"dunelocked:overworld_structures_stairs4"
+		]
+	}
+}

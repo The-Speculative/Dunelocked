@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain"
+		},
+
+		"conditional_features": [
+			{
+				"places_feature": "dunelocked:overworld_terrain_solid",
+				"condition": "!t.pyramid_generates"
+			},
+			{
+				"places_feature": "dunelocked:overworld_terrain_carved",
+				"condition": 1
+			}
+		]
+	}
+}

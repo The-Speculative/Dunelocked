@@ -1,0 +1,359 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain_attachment",
+			"places_feature": "dunelocked:overworld_terrain"
+		},
+
+		"conditions": {
+			"placement_pass": "first_pass",
+
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"value": "overworld"
+			}
+		},
+
+		"distribution": {
+			"iterations": "
+				t.lowercave_position = 8;
+				t.lowercave_height = 11;
+				t.lowercave_terminus = t.lowercave_position + t.lowercave_height;
+				t.uppercave_position = 34;
+				t.uppercave_height = 24;
+				t.uppercave_terminus = t.uppercave_position + t.uppercave_height;
+
+				t.tile_carved = 1;
+				t.dimension_sealevel = 96;
+
+				t.slotmaps_dunescape_thresholds_aridity_river_maximum = 1 / 16;
+				t.slotmaps_dunescape_thresholds_aridity_river_minimum = -(1 / 16);
+				t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum = -(48 / 64);
+				t.slotmaps_dunescape_thresholds_aridity_oasis_minimum = -(60 / 64);
+				t.slotmaps_dunescape_thresholds_aridity_oasis_maximum = -(56 / 64);
+				t.slotmaps_dunescape_thresholds_extremity_flats_minimum = -(32 / 64);
+				t.slotmaps_dunescape_thresholds_extremity_flats_maximum = 32 / 64;
+
+				t.slotmaps_illuminated_thresholds_rarity_crystal_minimum = 5 / 8;
+
+				t.slotmaps_weathered_thresholds_rarity_damp_minimum = 1 / 4;
+
+				t.gametile_size = 2048;
+
+				t.gametile_origin_x = t.gametile_size * math.floor(v.originx / t.gametile_size);
+				t.gametile_origin_z = t.gametile_size * math.floor(v.originz / t.gametile_size);
+
+				t.pyramid_size_noise = query.noise(t.gametile_origin_x - 64, t.gametile_origin_z + 64);
+				t.pyramid_size =
+					math.floor(
+						64
+						+ 32 * math.pow(math.abs(t.pyramid_size_noise), 0.5) * math.abs(t.pyramid_size_noise) / t.pyramid_size_noise
+					)
+				;
+
+				t.pyramid_center_x_noise = query.noise(t.gametile_origin_x - 16, t.gametile_origin_z + 16);
+				t.pyramid_center_x =
+					math.floor(
+						t.gametile_origin_x
+						+ t.gametile_size / 2
+						+ (t.gametile_size / 8)
+							* math.pow(math.abs(t.pyramid_center_x_noise), 0.5) * math.abs(t.pyramid_center_x_noise) / t.pyramid_center_x_noise
+					)
+				;
+				t.pyramid_center_z_noise = query.noise(t.gametile_origin_x + 16, t.gametile_origin_z - 16);
+				t.pyramid_center_z =
+					math.floor(
+						t.gametile_origin_z
+						+ t.gametile_size / 2
+						+ (t.gametile_size / 8)
+							* math.pow(math.abs(t.pyramid_center_z_noise), 0.5) * math.abs(t.pyramid_center_z_noise) / t.pyramid_center_z_noise
+					)
+				;
+
+				t.pyramid_bottom =
+					84
+					+ 12 * query.noise(t.pyramid_center_x - 128, t.pyramid_center_z + 16)
+				;
+
+				t.pyramid_x_minimum = t.pyramid_center_x - t.pyramid_size + 1;
+				t.pyramid_x_maximum = t.pyramid_center_x + t.pyramid_size;
+				t.pyramid_z_minimum = t.pyramid_center_z - t.pyramid_size + 1;
+				t.pyramid_z_maximum = t.pyramid_center_z + t.pyramid_size;
+
+				t.pyramid_center_selector_aridity =
+					(
+						query.noise(
+							(t.pyramid_center_x - 256) / 2048,
+							(t.pyramid_center_z - 256) / 2048
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_center_x + 128) / 256,
+								(t.pyramid_center_z + 128) / 256
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_center_x - 2048) / 32,
+								(t.pyramid_center_z + 2048) / 32
+							)
+					) / 1.046875
+				;
+				t.pyramid_center_selector_extremity =
+					(
+						query.noise(
+							(t.pyramid_center_x + 32) / 1024,
+							(t.pyramid_center_z + 32) / 1024
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_center_x - 256) / 128,
+								(t.pyramid_center_z + 256) / 128
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_center_x - 256) / 32,
+								(t.pyramid_center_z + 256) / 32
+							)
+					) / 1.046875
+				;
+
+				t.pyramid_southeastcorner_selector_aridity =
+					(
+						query.noise(
+							(t.pyramid_x_maximum - 256) / 2048,
+							(t.pyramid_z_maximum - 256) / 2048
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_maximum + 128) / 256,
+								(t.pyramid_z_maximum + 128) / 256
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_maximum - 2048) / 32,
+								(t.pyramid_z_maximum + 2048) / 32
+							)
+					) / 1.046875
+				;
+				t.pyramid_southeastcorner_selector_extremity =
+					(
+						query.noise(
+							(t.pyramid_x_maximum + 32) / 1024,
+							(t.pyramid_z_maximum + 32) / 1024
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_maximum - 256) / 128,
+								(t.pyramid_z_maximum + 256) / 128
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_maximum - 256) / 32,
+								(t.pyramid_z_maximum + 256) / 32
+							)
+					) / 1.046875
+				;
+
+				t.pyramid_southwestcorner_selector_aridity =
+					(
+						query.noise(
+							(t.pyramid_x_minimum - 256) / 2048,
+							(t.pyramid_z_maximum - 256) / 2048
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_minimum + 128) / 256,
+								(t.pyramid_z_maximum + 128) / 256
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_minimum - 2048) / 32,
+								(t.pyramid_z_maximum + 2048) / 32
+							)
+					) / 1.046875
+				;
+				t.pyramid_southwestcorner_selector_extremity =
+					(
+						query.noise(
+							(t.pyramid_x_minimum + 32) / 1024,
+							(t.pyramid_z_maximum + 32) / 1024
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_minimum - 256) / 128,
+								(t.pyramid_z_maximum + 256) / 128
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_minimum - 256) / 32,
+								(t.pyramid_z_maximum + 256) / 32
+							)
+					) / 1.046875
+				;
+
+				t.pyramid_northwestcorner_selector_aridity =
+					(
+						query.noise(
+							(t.pyramid_x_minimum - 256) / 2048,
+							(t.pyramid_z_minimum - 256) / 2048
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_minimum + 128) / 256,
+								(t.pyramid_z_minimum + 128) / 256
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_minimum - 2048) / 32,
+								(t.pyramid_z_minimum + 2048) / 32
+							)
+					) / 1.046875
+				;
+				t.pyramid_northwestcorner_selector_extremity =
+					(
+						query.noise(
+							(t.pyramid_x_minimum + 32) / 1024,
+							(t.pyramid_z_minimum + 32) / 1024
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_minimum - 256) / 128,
+								(t.pyramid_z_minimum + 256) / 128
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_minimum - 256) / 32,
+								(t.pyramid_z_minimum + 256) / 32
+							)
+					) / 1.046875
+				;
+
+				t.pyramid_northeastcorner_selector_aridity =
+					(
+						query.noise(
+							(t.pyramid_x_maximum - 256) / 2048,
+							(t.pyramid_z_minimum - 256) / 2048
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_maximum + 128) / 256,
+								(t.pyramid_z_minimum + 128) / 256
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_maximum - 2048) / 32,
+								(t.pyramid_z_minimum + 2048) / 32
+							)
+					) / 1.046875
+				;
+				t.pyramid_northeastcorner_selector_extremity =
+					(
+						query.noise(
+							(t.pyramid_x_maximum + 32) / 1024,
+							(t.pyramid_z_minimum + 32) / 1024
+						)
+						+ 0.03125
+							* query.noise(
+								(t.pyramid_x_maximum - 256) / 128,
+								(t.pyramid_z_minimum + 256) / 128
+							)
+						+ 0.015625
+							* query.noise(
+								(t.pyramid_x_maximum - 256) / 32,
+								(t.pyramid_z_minimum + 256) / 32
+							)
+					) / 1.046875
+				;
+
+				t.configuration_selectionpadding_aridity = 1 / 32;
+				t.configuration_selectionpadding_extremity = 1 / 8;
+
+				t.pyramid_generates =
+					(
+						(
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_center_selector_aridity
+							&& t.pyramid_center_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.pyramid_center_selector_aridity
+							&& t.pyramid_center_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+							&& t.pyramid_center_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_center_selector_aridity
+							&& t.pyramid_center_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity
+						)
+					)
+					&& (
+						(
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_southeastcorner_selector_aridity
+							&& t.pyramid_southeastcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.pyramid_southeastcorner_selector_aridity
+							&& t.pyramid_southeastcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+							&& t.pyramid_southeastcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_southeastcorner_selector_aridity
+							&& t.pyramid_southeastcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity
+						)
+					)
+					&& (
+						(
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_southwestcorner_selector_aridity
+							&& t.pyramid_southwestcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.pyramid_southwestcorner_selector_aridity
+							&& t.pyramid_southwestcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+							&& t.pyramid_southwestcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_southwestcorner_selector_aridity
+							&& t.pyramid_southwestcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity
+						)
+					)
+					&& (
+						(
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_northwestcorner_selector_aridity
+							&& t.pyramid_northwestcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.pyramid_northwestcorner_selector_aridity
+							&& t.pyramid_northwestcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+							&& t.pyramid_northwestcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_northwestcorner_selector_aridity
+							&& t.pyramid_northwestcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity
+						)
+					)
+					&& (
+						(
+							t.slotmaps_dunescape_thresholds_aridity_river_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_northeastcorner_selector_aridity
+							&& t.pyramid_northeastcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity <= t.pyramid_northeastcorner_selector_aridity
+							&& t.pyramid_northeastcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_river_minimum - t.configuration_selectionpadding_aridity
+							&& t.pyramid_northeastcorner_selector_extremity < t.slotmaps_dunescape_thresholds_extremity_flats_maximum - t.configuration_selectionpadding_extremity
+						)
+						|| (
+							t.slotmaps_dunescape_thresholds_aridity_oasis_maximum + t.configuration_selectionpadding_aridity <= t.pyramid_northeastcorner_selector_aridity
+							&& t.pyramid_northeastcorner_selector_aridity < t.slotmaps_dunescape_thresholds_aridity_lesserflats_minimum - t.configuration_selectionpadding_aridity
+						)
+					)
+				;
+
+				return 1;
+			",
+
+			"x": 0,
+			"z": 0,
+			"y": 0
+		}
+	}
+}

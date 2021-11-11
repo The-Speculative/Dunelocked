@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "glowing_mushroom_hyphae_top",
+        "metalness_emissive_roughness": "glowing_mushroom_hyphae_top_mer",
+        "heightmap": "glowing_mushroom_hyphae_top_heightmap"
+    }
+}

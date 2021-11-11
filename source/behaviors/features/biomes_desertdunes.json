@@ -1,0 +1,52 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomes_desertdunes"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_desertbasic",
+
+		"iterations": "
+			t.dune_impression1 = 1 - math.abs(t.noiseoctaves_local);
+			t.noiseoctaves_local < 0 ? {
+				t.dune_impression1 = math.pow(t.dune_impression1, 0.4);
+			};
+
+			t.dune_impression2 = 1 - math.abs(t.noiseoctaves_chippy2 / 2);
+			t.noiseoctaves_chippy2 < 0 ? {
+				t.dune_impression2 = math.pow(t.dune_impression2, 0.4);
+			};
+
+			t.biomecolumn_terminus =
+				t.dimension_sealevel
+				+ 12
+				+ 24 * t.noiseoctaves_biome
+				+ 13 * (t.dune_impression1 + t.dune_impression2)
+			;
+			t.biomecolumn_maximumheight = t.biomecolumn_terminus - v.originy;
+			t.biomecolumn_layers_sand_height = 2;
+			t.biomecolumn_layers_sand_position =
+				t.biomecolumn_maximumheight
+				- t.biomecolumn_layers_sand_height
+			;
+			t.biomecolumn_layers_limestone_height =
+				math.floor(t.biomecolumn_maximumheight / 3)
+			;
+			t.biomecolumn_layers_sandstone_position = t.biomecolumn_layers_limestone_height;
+			t.biomecolumn_layers_sandstone_height =
+				t.biomecolumn_layers_sand_position
+				- t.biomecolumn_layers_sandstone_position
+			;
+			t.biomecolumn_layers_globalwater_position = t.biomecolumn_maximumheight;
+			t.biomecolumn_layers_globalwater_height = t.dimension_sealevel - t.biomecolumn_terminus;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

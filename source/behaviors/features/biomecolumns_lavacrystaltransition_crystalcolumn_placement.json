@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_lavacrystaltransition_crystalcolumn_placement"
+		},
+
+		"places_feature": "dunelocked:biomes_crystal",
+
+		"iterations": "
+			t.biomecolumn_maximumheight = t.biomecolumn_layers_crystalcolumn_height;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": "t.biomecolumn_layers_crystalcolumn_position"
+	}
+}

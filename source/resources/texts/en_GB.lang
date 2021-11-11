@@ -1,0 +1,12 @@
+pack.name=Dunelocked
+pack.description=For 5K Add-On Jam!
+
+## Blocks
+tile.dunelocked:limestone.name=Limestone
+tile.dunelocked:crystalline_limestone.name=Crystalline Limestone
+tile.dunelocked:hardslate.name=Hardslate
+tile.dunelocked:mycelial_mud.name=Glowing Mud
+tile.dunelocked:glowing_mushroom_hyphae.name=Glowing Mushroom Hyphae
+tile.dunelocked:glowing_mushroom_block.name=Glowing Mushroom Block
+tile.dunelocked:glowing_mushroom.name=Glowing Mushroom
+tile.dunelocked:mud.name=Mud

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_oasislush_mudpatch"
+		},
+
+		"features": [
+			"dunelocked:biomedecorators_oasislush_mudpatch_mud_placement",
+			"dunelocked:biomedecorators_oasislush_mudpatch_moss_placement"
+		]
+	}
+}

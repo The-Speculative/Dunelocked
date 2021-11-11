@@ -1,0 +1,18 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:search_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_riverlush_mudpatch_condition"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_riverlush_mudpatch_condition_water",
+
+		"search_volume": {
+			"min": [0, 0, 0],
+			"max": [0, 0, 0]
+		},
+
+		"search_axis": "+y"
+	}
+}

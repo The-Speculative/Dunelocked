@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_gametiles_underground_tiles"
+		},
+
+		"conditional_features": [
+			// {
+			// 	"places_feature": "dunelocked:overworld_gametiles_underground_tiles_stairwell",
+			// 	"condition": "t.gametile_selector < 0"
+			// },
+			// {
+			// 	"places_feature": "dunelocked:overworld_gametiles_underground_tiles_treasure",
+			// 	"condition": 1
+			// }
+		]
+	}
+}

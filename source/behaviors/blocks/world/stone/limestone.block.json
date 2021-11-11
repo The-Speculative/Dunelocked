@@ -1,0 +1,36 @@
+{
+    "format_version": "1.17.32",
+    "minecraft:block": {
+        "description": {
+            "identifier": "dunelocked:limestone"
+        },
+
+        "components": {
+            "tag:stone": {},
+            "tag:stone_pick_diggable": {},
+            "tag:limestone": {},
+            "minecraft:loot": "loot_tables/empty.json",
+
+            "minecraft:destroy_time": 1.5,
+            "minecraft:explosion_resistance": 5.0,
+            "minecraft:map_color": "#7d7a62",
+
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.stone"
+            },
+
+            "minecraft:on_player_destroyed": {
+                "event": "blockDestroyed",
+                "condition": "q.equipped_item_any_tag('slot.weapon.mainhand','minecraft:wooden_tier','minecraft:stone_tier','minecraft:iron_tier','minecraft:golden_tier','minecraft:diamond_tier','minecraft:netherite_tier')"
+            }
+        },
+        "events": {
+            "blockDestroyed": {
+                "spawn_loot": {
+                    "table": "loot_tables/blocks/limestone.json"
+                }
+            }
+        }
+    }
+}

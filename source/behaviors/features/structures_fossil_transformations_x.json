@@ -1,0 +1,32 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:structures_fossil_transformations_x"
+		},
+
+		"places_feature": "dunelocked:biomefeatures_shared_fossilz_lava",
+
+		"iterations": "
+			t.structure_size_x = 8;
+			t.structure_size_z = 5;
+			t.structure_size_y = 13;
+
+			return t.structure_size_x * t.structure_size_z * t.structure_size_y;
+		",
+
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.structure_size_x - 1"]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.structure_size_z - 1"]
+		},
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.structure_size_y - 1"]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:conditional_list": {
+		"description": {
+			"identifier": "dunelocked:overworld_decorators_upperunderground"
+		},
+
+		"conditional_features": [
+			// {
+			// 	"places_feature": "dunelocked:biomedecorators_stony",
+			// 	"condition": "t.slotmap_weathered_biome == 'stony'"
+			// },
+			{
+				"places_feature": "dunelocked:biomedecorators_damp",
+				"condition": "t.slotmap_weathered_biome == 'damp'"
+			},
+			{
+				"places_feature": "dunelocked:biomedecorators_stonydamptransition",
+				"condition": "t.slotmap_weathered_biome == 'stony_damp_transition'"
+			}
+		]
+	}
+}

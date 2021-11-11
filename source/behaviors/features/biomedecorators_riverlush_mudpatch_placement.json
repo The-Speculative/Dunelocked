@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_riverlush_mudpatch_placement"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_riverlush_mudpatch_attempt",
+
+		"iterations": 16,
+
+		"x": {
+			"distribution": "jittered_grid",
+			"extent": [0, 15],
+			"step_size": 4
+		},
+		"z": {
+			"distribution": "jittered_grid",
+			"extent": [0, 15],
+			"step_size": 4
+		},
+		"y": "t.dimension_sealevel - 1"
+	}
+}

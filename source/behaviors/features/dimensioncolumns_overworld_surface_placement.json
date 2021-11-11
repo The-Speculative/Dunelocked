@@ -1,0 +1,37 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:dimensioncolumns_overworld_surface_placement"
+		},
+
+		"places_feature": "dunelocked:slotmaps_dunescape",
+
+		"iterations": "
+			t.selection_aridity =
+				(
+					t.noiseoctaves_instance
+					+ 0.03125 * t.noiseoctaves_biome
+					+ 0.015625 * t.noiseoctaves_cave2
+				) / 1.046875
+			;
+			t.selection_extremity =
+				(
+					t.noiseoctaves_continent
+					+ 0.03125 * t.noiseoctaves_local
+					+ 0.015625 * t.noiseoctaves_cave1
+				) / 1.046875
+			;
+
+			t.configuration_selectionpadding_aridity = 1 / 32;
+			t.configuration_selectionpadding_extremity = 1 / 8;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": "t.column_surface_position"
+	}
+}

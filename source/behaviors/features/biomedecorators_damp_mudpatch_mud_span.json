@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_damp_mudpatch_mud_span"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_damp_mudpatch_mud",
+
+		"iterations": 2,
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, 1]
+		}
+	}
+}

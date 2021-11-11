@@ -1,0 +1,13 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "dunelocked:structures_pyramid_interior_directions_south"
+		},
+
+		"structure_name": "dunelocked:pyramid/interior",
+
+		"facing_direction": "south",
+		"constraints": {}
+	}
+}

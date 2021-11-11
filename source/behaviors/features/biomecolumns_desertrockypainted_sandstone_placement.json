@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_desertrockypainted_sandstone_placement"
+		},
+
+		"places_feature": "dunelocked:biomecolumns_desertrockypainted_sandstone",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": "t.biomecolumn_layers_sandstone_position"
+	}
+}

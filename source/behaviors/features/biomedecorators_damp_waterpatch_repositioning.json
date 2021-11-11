@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_damp_waterpatch_repositioning"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_damp_waterpatch",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": -1
+	}
+}

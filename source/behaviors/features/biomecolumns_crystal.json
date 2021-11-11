@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_crystal"
+		},
+
+		"features": [
+			"dunelocked:biomecolumns_crystal_tufflower",
+			"dunelocked:biomecolumns_crystal_calcitelower_placement",
+			"dunelocked:biomecolumns_crystal_amethyst_placement",
+			"dunelocked:biomecolumns_crystal_calciteupper_placement",
+			"dunelocked:biomecolumns_crystal_tuffupper_placement"
+		]
+	}
+}

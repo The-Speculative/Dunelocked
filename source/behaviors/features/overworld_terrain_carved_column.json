@@ -1,0 +1,166 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain_carved_column"
+		},
+
+		"places_feature": "dunelocked:overworld_terrain_carved_column_passes",
+
+		"iterations": "
+			t.noiseoctaves_instance =
+				query.noise(
+					(v.originx - 256) / 2048,
+					(v.originz - 256) / 2048
+				)
+			;
+			t.noiseoctaves_continent =
+				query.noise(
+					(v.originx + 32) / 1024,
+					(v.originz + 32) / 1024
+				)
+			;
+			t.noiseoctaves_region =
+				query.noise(
+					(v.originx - 128) / 512,
+					(v.originz - 128) / 512
+				)
+			;
+			t.noiseoctaves_biome =
+				query.noise(
+					(v.originx + 128) / 256,
+					(v.originz + 128) / 256
+				)
+			;
+			t.noiseoctaves_local =
+				query.noise(
+					(v.originx - 256) / 128,
+					(v.originz + 256) / 128
+				)
+			;
+			t.noiseoctaves_chippy =
+				query.noise(
+					(v.originx - 256) / 64,
+					(v.originz + 256) / 64
+				)
+			;
+			t.noiseoctaves_chippy2 =
+				query.noise(
+					(v.originx - 768) / 64,
+					(v.originz + 512) / 64
+				)
+			;
+			t.noiseoctaves_cave1 =
+				query.noise(
+					(v.originx - 256) / 32,
+					(v.originz + 256) / 32
+				)
+			;
+			t.noiseoctaves_cave2 =
+				query.noise(
+					(v.originx - 2048) / 32,
+					(v.originz + 2048) / 32
+				)
+			;
+			t.noiseoctaves_patch =
+				query.noise(
+					(v.originx - 256) / 16,
+					(v.originz + 256) / 16
+				)
+			;
+			t.noiseoctaves_clump =
+				query.noise(
+					(v.originx - 256) / 8,
+					(v.originz + 256) / 8
+				)
+			;
+			t.noiseoctaves_block =
+				query.noise(
+					(v.originx - 256) / 4,
+					(v.originz + 256) / 4
+				)
+			;
+
+			t.column_dividefloor_height =
+				math.floor(
+					5
+					+ (
+						1 * t.noiseoctaves_local
+						+ 3 * t.noiseoctaves_patch
+					)
+						/ 4
+						* 2
+				)
+			;
+			t.column_undergroundlower_position = t.column_dividefloor_height;
+			t.column_undergroundupper_position =
+				math.floor(
+					24
+					+ (
+						3 * t.noiseoctaves_patch
+						+ 2 * t.noiseoctaves_clump
+					)
+						/ 5
+						* 3
+				)
+			;
+			t.column_surface_position =
+				math.floor(
+					t.dimension_sealevel
+					- 32
+					+ (
+						3 * t.noiseoctaves_local
+						+ 1 * t.noiseoctaves_clump
+					)
+						/ 4
+						* 3
+				)
+			;
+			t.column_undergroundlower_height =
+				t.column_undergroundupper_position
+				- t.column_undergroundlower_position
+			;
+			t.column_undergroundupper_height =
+				t.column_surface_position
+				- t.column_undergroundupper_position
+			;
+
+			t.column_disparity_x =
+				math.abs(
+					v.originx
+				-
+					(
+						t.gametile_origin_x
+						+ t.gametile_size / 2
+					)
+				)
+					/ (t.gametile_size / 2)
+			;
+			t.column_disparity_z =
+				math.abs(
+					v.originz
+				-
+					(
+						t.gametile_origin_z
+						+ t.gametile_size / 2
+					)
+				)
+					/ (t.gametile_size / 2)
+			;
+			t.column_tileselector =
+				-(
+					math.pow(t.column_disparity_x, 8)
+					+ math.pow(t.column_disparity_z, 8)
+					- 1
+				)
+			;
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

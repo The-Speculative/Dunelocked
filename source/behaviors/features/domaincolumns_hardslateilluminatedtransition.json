@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:domaincolumns_hardslateilluminatedtransition"
+		},
+
+		"features": [
+			"dunelocked:domaincolumns_hardslateilluminatedtransition_illuminatedslot_placement",
+			"dunelocked:domaincolumns_hardslate_hardslate_placement"
+		]
+	}
+}

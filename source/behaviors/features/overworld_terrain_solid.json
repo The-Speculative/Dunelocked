@@ -1,0 +1,23 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain_solid"
+		},
+
+		"places_feature": "dunelocked:overworld_terrain_solid_column",
+
+		"iterations": 256,
+
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15]
+		},
+		"y": 0
+	}
+}

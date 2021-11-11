@@ -1,0 +1,20 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_desertbasic_sandstone"
+		},
+
+		"places_feature": "dunelocked:materials_sandstone",
+
+		"iterations": "t.biomecolumn_layers_sandstone_height",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.biomecolumn_layers_sandstone_height - 1"]
+		}
+	}
+}

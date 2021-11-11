@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_structures_stairs1"
+		},
+
+		"places_feature": "dunelocked:structures_pyramid_stairs_1_directions_south",
+
+		"iterations": "math.floor((t.pyramid_bottom + t.pyramid_size - 16 - v.originy - 1) / 4) + 1",
+
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [0, "t.pyramid_bottom + t.pyramid_size - 16 - v.originy - 1"],
+			"step_size": 4
+		}
+	}
+}

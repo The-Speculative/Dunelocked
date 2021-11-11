@@ -1,0 +1,8 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:texture_set": {
+        "color": "glowing_mushroom",
+        "metalness_emissive_roughness": "glowing_mushroom_mer",
+        "heightmap": "glowing_mushroom_heightmap"
+    }
+}

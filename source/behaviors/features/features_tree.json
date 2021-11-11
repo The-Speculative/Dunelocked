@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:features_tree"
+		},
+
+		"places_feature": "dunelocked:structures_tree_directions",
+
+		"iterations": "
+			t.structure_direction_adjusted = math.random_integer(0, 3);
+
+			return 1;
+		",
+
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

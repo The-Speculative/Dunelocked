@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_oasislush_mudpatch_placement"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_oasislush_mudpatch_attempt",
+
+		"iterations": 64,
+
+		"x": {
+			"distribution": "jittered_grid",
+			"extent": [0, 15],
+			"step_size": 2
+		},
+		"z": {
+			"distribution": "jittered_grid",
+			"extent": [0, 15],
+			"step_size": 2
+		},
+		"y": "t.dimension_sealevel - 1"
+	}
+}

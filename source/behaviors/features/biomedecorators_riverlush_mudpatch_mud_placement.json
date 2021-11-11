@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:biomedecorators_riverlush_mudpatch_mud_placement"
+		},
+
+		"places_feature": "dunelocked:biomedecorators_riverlush_mudpatch_mud",
+
+		"iterations": 8192,
+
+		"x": {
+			"distribution": "gaussian",
+			"extent": [-8, 8]
+		},
+		"z": {
+			"distribution": "gaussian",
+			"extent": [-8, 8]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [-8, 8]
+		}
+	}
+}

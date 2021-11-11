@@ -1,0 +1,14 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "dunelocked:biomecolumns_damp"
+		},
+
+		"features": [
+			"dunelocked:biomecolumns_damp_coarsedirt",
+			"dunelocked:biomecolumns_damp_terracotta_placement"
+		]
+	}
+}

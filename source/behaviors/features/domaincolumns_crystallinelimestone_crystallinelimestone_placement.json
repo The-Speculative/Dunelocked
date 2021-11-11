@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:domaincolumns_crystallinelimestone_crystallinelimestone_placement"
+		},
+
+		"places_feature": "dunelocked:domaincolumns_crystallinelimestone_crystallinelimestone",
+
+		"iterations": 1,
+
+		"x": 0,
+		"z": 0,
+		"y": "t.domaincolumn_layers_crystallinelimestone_position"
+	}
+}

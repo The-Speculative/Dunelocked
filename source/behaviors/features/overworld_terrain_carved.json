@@ -1,0 +1,25 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dunelocked:overworld_terrain_carved"
+		},
+
+		"places_feature": "dunelocked:overworld_terrain_carved_column",
+
+		"iterations": 256,
+
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15],
+			"grid_offset": 9
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [0, 15],
+			"grid_offset": 8
+		},
+		"y": 0
+	}
+}

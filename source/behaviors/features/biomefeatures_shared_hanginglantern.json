@@ -1,0 +1,26 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:growing_plant_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_shared_hanginglantern"
+		},
+
+		"body_blocks": [
+			["minecraft:chain", 1]
+		],
+		"head_blocks": [
+			[
+				{
+					"name": "minecraft:lantern",
+					"states": {"hanging": true}
+				},
+				1
+			]
+		],
+
+		"growth_direction": "down",
+		"height_distribution": [
+			[{"range_min": 1, "range_max": 4}, 1]
+		]
+	}
+}

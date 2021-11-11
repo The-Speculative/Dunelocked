@@ -1,0 +1,36 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "dunelocked:biomefeatures_damp_glowinggiantmushroom"
+		},
+
+		"acacia_trunk": {
+			"trunk_block": "dunelocked:glowing_mushroom_hyphae",
+
+			"trunk_width": 1,
+			"trunk_height": {
+				"base": 2,
+				"intervals": [2, 2, 2, 2, 2]
+			},
+
+			"trunk_lean": {
+				"allow_diagonal_growth": true,
+
+				"lean_height": 2,
+				"lean_steps": 1
+			}
+		},
+
+		"acacia_canopy": {
+			"leaf_block": "dunelocked:glowing_mushroom_block",
+
+			"canopy_size": 2,
+			"simplify_canopy": true
+		},
+
+		"may_replace": ["minecraft:air"],
+		"may_grow_on": ["dunelocked:mycelial_mud"]
+	}
+}
